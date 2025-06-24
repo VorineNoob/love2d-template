@@ -5,7 +5,7 @@ require("lib.utils")
 
 function Text(text, x, y, max_width, control, size)
 
-	object = GameObject("Text")
+	local object = GameObject("Text")
 
 	object.text = text
 	object.x = x

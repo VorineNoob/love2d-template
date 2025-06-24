@@ -5,7 +5,7 @@ require("EventManager")
 function GameObject(type)
 	print(string.format("GameObject(%s) was run.", type))
 
-	object = {}
+	local object = {}
 
 	object.type = type
 

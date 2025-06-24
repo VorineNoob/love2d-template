@@ -6,7 +6,7 @@ require("GameObject")
 function Scene()
 	print("Scene() was run.")
 	-- 继承自 GameObject --
-	object = GameObject("Scene")
+	local object = GameObject("Scene")
 
 	object.sprites = {}													-- 场景中的所有精灵
 	object.texts = {} 													-- 场景中的所有文字
