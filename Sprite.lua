@@ -26,7 +26,7 @@ function Sprite(path, x, y)
 	function object:move(ox, oy)
 		print("A sprite is moving!")
 		self.x = self.x + ox
-		self.x = self.y + oy
+		self.y = self.y + oy
 	end
 
 	return object
