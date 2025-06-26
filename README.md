@@ -20,6 +20,10 @@
 
 > (这个文件名还是我凭感觉写的没想到单词真对了2333)
 
+#### Timer.lua
+
+定时器
+
 ### .(ROOT DIRECTORY)
 
 #### EventManager.lua
