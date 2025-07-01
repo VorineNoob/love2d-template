@@ -1,11 +1,5 @@
 -- SceneManager 场景管理类，用于管理场景，单例 --
 
-require("Scene")
-require("LogoScene")
-require("EventManager")
-require("MainScene")
-require("GameNameScene")
-
 SceneManager = GameObject("SceneManager")
 
 SceneManager.current_scene = nil

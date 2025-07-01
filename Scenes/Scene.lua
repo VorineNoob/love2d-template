@@ -1,8 +1,5 @@
 -- 场景类 --
 
-require("lib.utils")
-require("GameObject")
-
 function Scene()
 	print("Scene() was run.")
 	-- 继承自 GameObject --

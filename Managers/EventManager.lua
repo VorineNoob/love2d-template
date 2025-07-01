@@ -1,7 +1,5 @@
 -- EventManager 事件管理类，用于管理初始化，每帧等事件，单例 --
 
-require("lib.utils")
-
 EventManager = {}
 
 EventManager.game_objects = {}                                      -- 需要接受事件处理的游戏对象，必须有 init, update 和 draw 函数

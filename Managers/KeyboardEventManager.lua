@@ -1,7 +1,5 @@
 -- KeyboardEventManager 键盘事件管理类，用于在每次触发键盘的时候检查是否需要执行函数 --
 
-require("lib.utils")
-
 KeyboardEventManager = {}
 
 -- 需要检查的键盘事件，其中有一个执行的函数(func)，函数的参数列表(args)，以及一个调用函数时需要的按键(scancode)

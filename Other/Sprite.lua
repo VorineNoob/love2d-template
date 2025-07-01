@@ -1,7 +1,5 @@
 -- Sprite 精灵类，用于存储图片对象 --
 
-require("GameObject")
-
 function Sprite(path, x, y)
 
 	local object = GameObject("Sprite")

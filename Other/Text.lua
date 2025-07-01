@@ -1,8 +1,5 @@
 -- Text 类，用于存储某个文字 --
 
-require("GameObject")
-require("lib.utils")
-
 function Text(text, x, y, max_width, control, size)
 
 	local object = GameObject("Text")

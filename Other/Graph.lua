@@ -1,8 +1,5 @@
 -- Garph 图形类，用于绘制图形 --
 
-require("GameObject")
-require("lib.utils")
-
 function Graph(type, mode, rgba, draw_args)
 
 	local object = GameObject("Graph")

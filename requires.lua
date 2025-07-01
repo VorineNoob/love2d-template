@@ -1,0 +1,18 @@
+_G.love = require("love")
+
+require("Managers.EventManager")
+require("Other.GameObject")
+require("Other.Graph")
+require("Other.Sprite")
+require("Other.Text")
+require("Managers.KeyboardEventManager")
+require("Managers.GameStatusManager")
+require("Managers.MemoryManager")
+require("Managers.SceneManager")
+require("Scenes.Scene")
+require("Scenes.GameNameScene")
+require("Scenes.LogoScene")
+require("Scenes.MainScene")
+require("lib.Timer")
+require("lib.utils")
+

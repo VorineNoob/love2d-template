@@ -1,14 +1,4 @@
-_G.love = require("love")
-require("lib.utils")
-require("EventManager")
-require("GameObject")
-require("GameStatusManager")
-require("MainScene")
-require("LogoScene")
-require("MemoryManager")
-require("Scene")
-require("SceneManager")
-require("Text")
+require("requires")
 
 -- 关于 love 运行时的参数处理
 local args = {}

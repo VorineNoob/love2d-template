@@ -1,7 +1,5 @@
 -- GameStatusManager 游戏状态管理类，用于管理游戏的状态，单例模式 --
 
-require("KeyboardEventManager")
-
 KeyboardEventManager:add_event(os.exit, {0}, "escape")
 
 -- require("GameObject")
