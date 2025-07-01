@@ -5,7 +5,7 @@ _G.SCREEN_HEIGHT = 720
 
 function love.conf(t)
 
-	t.window.title = "NorthEast - Untitled"
+	t.window.title = "NorthEast - LetsJump!"
 	t.window.width = SCREEN_WIDTH
 	t.window.height = SCREEN_HEIGHT
 

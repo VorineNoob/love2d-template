@@ -3,6 +3,7 @@
 require("Scene")
 require("conf")
 require("Text")
+require("MainScene")
 
 -- 单例模式的单个对象
 GameNameScene = Scene()
@@ -12,11 +13,11 @@ GameNameScene.logo_text = {}
 
 function GameNameScene:init()
 	-- 调试信息而已，其他的 print 都是调试信息，别在意
-	print("GameNameScene:init() was run.")
+	-- print("GameNameScene:init() was run.")
 
 	-- 初始化中间那个大字
-	self.logo_text = Text("Untitled", 0, SCREEN_HEIGHT / 2 - 120, 1080, "center", 150)
-	self.logo_text:setColor(1, 1, 1, 0)
+	self.logo_text = Text("LetsJump", 0, SCREEN_HEIGHT / 2 - 120, 1080, "center", 150)
+	self.logo_text:setColor(0 / 255, 144 / 255, 255 / 255, 0)
 
 	-- 这里是大字淡入淡出效果
 	local tmp = 0
@@ -24,7 +25,7 @@ function GameNameScene:init()
 	local SPEED = 0.5
 	function self.logo_text:update(dt)
 
-		print(string.format("GameNameScene.logo_text:update(): status=%s", status))
+		-- print(string.format("GameNameScene.logo_text:update(): status=%s", status))
 
 		-- 此处，淡入
 		if status == "up" then
@@ -37,8 +38,8 @@ function GameNameScene:init()
 		-- 此处，淡出
 		elseif status == "down" then
 			-- 停留一会
-			if tmp < 1 then tmp = tmp + 1 * dt end
-			if tmp >= 1 then
+			if tmp < 1 then tmp = tmp + dt
+			else
 				if self.A > 0 then
 					self.A = self.A - SPEED * dt
 				else
@@ -53,8 +54,8 @@ function GameNameScene:init()
 		end
 	end
 
-	-- 下一个场景直接回去2333
-	self.next_scene = LogoScene
+	-- 下一个场景去到游戏主界面
+	self.next_scene = MainScene
 	-- 你要记得这是初始化函数哦不要被上面的那个 update() 给迷晕了
 	self.is_next_scene = false
 
@@ -64,7 +65,7 @@ end
 
 -- 更新
 function GameNameScene:update(dt)
-	print("GameNameScene:update(): running..")
+	-- print("GameNameScene:update(): running..")
 	if self.logo_text.update then self.logo_text:update(dt) end
 end
 

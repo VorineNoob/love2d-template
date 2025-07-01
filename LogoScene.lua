@@ -13,7 +13,7 @@ LogoScene.logo_text = {}
 
 function LogoScene:init()
 	-- 调试信息而已，其他的 print 都是调试信息，别在意
-	print("LogoScene:init() was run.")
+	-- print("LogoScene:init() was run.")
 
 	-- 初始化中间那个大字
 	self.logo_text = Text("NorthEast", 0, SCREEN_HEIGHT / 2 - 120, 1080, "center", 150)
@@ -25,7 +25,7 @@ function LogoScene:init()
 	local SPEED = 0.5
 	function self.logo_text:update(dt)
 
-		print(string.format("GameNameScene.logo_text:update(): status=%s", status))
+		-- print(string.format("GameNameScene.logo_text:update(): status=%s", status))
 
 		-- 此处，淡入
 		if status == "up" then
@@ -38,8 +38,8 @@ function LogoScene:init()
 		-- 此处，淡出
 		elseif status == "down" then
 			-- 停留一会
-			if tmp < 1 then tmp = tmp + 1 * dt end
-			if tmp >= 1 then
+			if tmp < 1 then tmp = tmp + dt
+			else
 				if self.A > 0 then
 					self.A = self.A - SPEED * dt
 				else
@@ -65,7 +65,7 @@ end
 
 -- 更新
 function LogoScene:update(dt)
-	print("LogoScene:update(): running..")
+	-- print("LogoScene:update(): running..")
 	if self.logo_text.update then self.logo_text:update(dt) end
 end
 

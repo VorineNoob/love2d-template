@@ -22,12 +22,22 @@ function Scene()
 
 	-- 绘制场景
 	function object:draw()
-		print("Scene:draw() was run.")
+		-- print("Scene:draw() was run.")
 		for i, v in ipairs(self.sprites) do
-			v:draw()
+			if not v.removed then
+				v:draw()
+			end
+			-- if v.removed then
+			-- 	table.remove(self.sprites, i)
+			-- 	v = nil
+			-- else
+			-- 	v:draw()
+			-- end
 		end
 		for i, v in ipairs(self.texts) do
-			v:draw()
+			if not v.removed then
+				v:draw()
+			end
 		end
 
 		if self.background then self.background:draw() end
@@ -36,11 +46,11 @@ function Scene()
 	-- 往场景中添加精灵
 	function object:add_sprite(sprite)
 		print("Scene:add_sprite() was run.")
-		if get_type(sprite) == "Sprite" then
+		if get_type(sprite) == "Sprite" or get_type(sprite) == "Graph" then
 			table.insert(self.sprites, sprite)
 			return true
 		else
-			error("object:add_sprite(): arg isnt a Sprite!")
+			error(string.format("object:add_sprite(): arg isnt a Sprite!(%s)", get_type(sprite)))
 			return false
 		end
 	end
@@ -81,13 +91,14 @@ function Scene()
 	end
 
 	-- 进行每帧的事件判断
-	function object:update()
-		print("Scene:update() was run.")
+	function object:update(dt)
+		-- print("Scene:update() was run.")
 		for i, v in ipairs(self.update_functions) do
-			v()
+			v(dt)
 		end
 	end
 
 	return object
 
 end
+
