@@ -11,7 +11,7 @@ function GameNameScene:init()
 	-- print("GameNameScene:init() was run.")
 
 	-- 初始化中间那个大字
-	self.logo_text = Text("LetsJump", 0, SCREEN_HEIGHT / 2 - 120, 1080, "center", 150)
+	self.logo_text = Text("Template", 0, SCREEN_HEIGHT / 2 - 120, 1080, "center", 150)
 	self.logo_text:setColor(0 / 255, 144 / 255, 255 / 255, 0)
 
 	-- 这里是大字淡入淡出效果

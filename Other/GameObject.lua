@@ -8,7 +8,7 @@ function GameObject(type)
 	object.type = type
 
 	function object:init() end
-	function object:update() end
+	function object:update(dt) end
 	function object:draw() end
 
 	return object

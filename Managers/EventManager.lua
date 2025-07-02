@@ -49,7 +49,7 @@ function EventManager:add_handle_object(object)
 		table.insert(self.game_objects, object)
 		return true
 	else
-		print("EventManager:add_handle_object(): arg isnt table!")
+		error("EventManager:add_handle_object(): arg isnt table!")
 		return false
 		-- error("EventManager:add_handle_object(): arg isnt GameObject!")
 	end
